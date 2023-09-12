@@ -1,9 +1,5 @@
-import { Box } from "native-base"
+import { Box } from 'native-base'
 
 export function Learning() {
-    return (
-        <Box>
-            Learnign
-        </Box>
-    )
+  return <Box>Learnign</Box>
 }

@@ -14,6 +14,7 @@ export function UserPhoto({ size, ...rest }: Props) {
         borderWidth={2}
         borderColor="white"
         {...rest}
+        alt=""
       />
     </>
   )
