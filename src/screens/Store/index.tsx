@@ -5,7 +5,7 @@ import Card from './components/Card'
 
 export function Store() {
   return (
-    <Box>
+    <>
       <HomeHeader />
       <VStack bgColor="blue.700" flex={1} mt={8}>
         <Heading
@@ -30,6 +30,6 @@ export function Store() {
           <Card />
         </Box>
       </VStack>
-    </Box>
+    </>
   )
 }
