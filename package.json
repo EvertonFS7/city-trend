@@ -6,7 +6,9 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "eslint src --ext .tsx,ts",
+    "lint:fix": "eslint src --ext .tsx,ts --fix"
   },
   "dependencies": {
     "@expo-google-fonts/roboto": "^0.2.3",
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@rocketseat/eslint-config": "^2.1.0",
     "@types/react": "^18.2.14",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
