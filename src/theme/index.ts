@@ -14,11 +14,12 @@ export const THEME = extendTheme({
     gray: {
       500: '#36474f',
       400: '#38464f',
-      300: '#3b4850',
-      200: '#C4C4CC',
-      100: '#E1E1E6',
+      300: '#5c5c5c',
+      200: '#E1E1E6',
+      100: '#EEEEEE',
     },
     white: '#FFFFFF',
+    black: '#000000',
   },
   fonts: {
     heading: 'Roboto_700Bold',

@@ -10,7 +10,7 @@ type AuthRoutes = {
 
 export type AuthNavigatorRoutesProps = NativeStackNavigationProp<AuthRoutes>
 
-const { Navigator, Screen } = createNativeStackNavigator<AuthRoutes>()
+const { Navigator } = createNativeStackNavigator<AuthRoutes>()
 
 export function AuthRoutes() {
   return (

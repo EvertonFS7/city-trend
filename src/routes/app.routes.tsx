@@ -1,20 +1,18 @@
-import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons'
+import { MaterialIcons, FontAwesome5, Ionicons } from '@expo/vector-icons'
 import {
   BottomTabNavigationProp,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs'
 import { Home } from '@screens/Home'
-import { Profile } from '@screens/Profile'
-import Rewards from '@screens/Rewards'
-import { Store } from '@screens/Store'
+import { Feed } from '@screens/Feed'
 import { useTheme } from 'native-base'
 import { Platform } from 'react-native'
+import { Favorites } from '@screens/Favorites'
 
 type AppRoutes = {
   home: undefined
-  Store: undefined
-  Rewards: undefined
-  Profile: undefined
+  Feed: undefined
+  Favorites: undefined
 }
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>
@@ -29,10 +27,10 @@ export function AppRoutes() {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarActiveTintColor: colors.green[400],
-        tabBarInactiveTintColor: colors.gray[200],
+        tabBarActiveTintColor: colors.white,
+        tabBarInactiveTintColor: colors.gray[300],
         tabBarStyle: {
-          backgroundColor: colors.blue[700],
+          backgroundColor: colors.black,
           borderTopWidth: 0,
           height: Platform.OS === 'android' ? 'auto' : 96,
           paddingBottom: sizes[10],
@@ -50,37 +48,20 @@ export function AppRoutes() {
         }}
       />
       <Screen
-        name="Store"
-        component={Store}
+        name="Feed"
+        component={Feed}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialIcons name="store" size={30} color={color} />
+            <FontAwesome5 name="city" size={20} color={color} />
           ),
         }}
       />
       <Screen
-        name="Rewards"
-        component={Rewards}
+        name="Favorites"
+        component={Favorites}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons
-              name="treasure-chest"
-              size={27}
-              color={color}
-            />
-          ),
-        }}
-      />
-      <Screen
-        name="Profile"
-        component={Profile}
-        options={{
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons
-              name="account-circle"
-              size={27}
-              color={color}
-            />
+            <Ionicons name="heart-circle" size={30} color={color} />
           ),
         }}
       />
